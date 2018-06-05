@@ -1,16 +1,20 @@
 "use strict";
 
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 // Why am I formatting my code this way: taking some single statements and
 // breaking them out to multiple lines? Here's why: https://bit.ly/2HmI6RA
 
 const ratSupremacist = 
-  new Monster("Intelligent Rat (Racist)", "lab-experiment gone awry", 5);
+  new Monster("Intelligent Rat (Racist)", "lab-experiment gone awry", 5, "ignorance");
 
 const lawsuitWaitingToHappen = 
-  new Monster("Sentient Boiling Hot Spilled Coffee", "construct", 5);
+  new Monster("Sentient Boiling Hot Spilled Coffee", "construct", 5, "splash");
 
 const gheklekTheWereRainbow = 
-  new Monster("Semi-Iridescent Goblin", "fantastical creature", 30);
+  new Monster("Semi-Iridescent Goblin", "fantastical creature", 30, "unicorn shit");
 
 // What's with that slash at the end of some of the lines below?
 // https://mdn.io/string#Long_literal_strings
@@ -18,16 +22,16 @@ const gheklekTheWereRainbow =
 
 const jennifer = 
   new Monster(
-    "Misunderstood Ogre (Former Cast Member of 'One Tree Hill') Acting \
-    in Self-Defense and Sheer Bewilderment", 
-    "fantastical creature", 
-    80
+    "Lady from Accounting", 
+    "office creature", 
+    80,
+    "tantrum"
   );
 
 const monsters = 
   [ratSupremacist, lawsuitWaitingToHappen, gheklekTheWereRainbow, jennifer];
 
-const superhero1 = new Hero("Superman", "Clark Kent", 110);
+const superhero1 = new Hero("Nerd Boy", "Patrick Hanson", 100, "coding expertise");
 
 // Below, I am using the newline "escape sequence" to force console.log to
 // print a literal newline on the console: http://mdn.io/string#Escape_notation
@@ -35,7 +39,7 @@ const superhero1 = new Hero("Superman", "Clark Kent", 110);
 console.log(
   "A hero emerges!", 
   "\nThe noble " + superhero1.name + " has vowed to defeat the monsters and \
-  save the realm.",
+save the realm.",
   "\nWill they be victorious?"
 );
 
